@@ -11,8 +11,8 @@ interface IAuthLabelGroup {
 
 const AuthLabelGroup: FC<IAuthLabelGroup> = ({ valueLabel, placeholderInput, classNameInput }) => {
 	return (
-		<div className="auth-group">
-			<Label value={valueLabel} className="auth-group__label" />
+		<div className='auth-group'>
+			<Label value={valueLabel} className='auth-group__label' />
 			<Input placeholder={placeholderInput} className={`${classNameInput}`} />
 		</div>
 	)

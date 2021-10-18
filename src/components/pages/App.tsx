@@ -4,7 +4,7 @@ import './App.scss'
 
 const App: FC = () => {
 	return (
-		<div className="App">
+		<div className='App'>
 			<AuthForm />
 		</div>
 	)
