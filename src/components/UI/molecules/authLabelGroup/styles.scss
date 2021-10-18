@@ -1,0 +1,8 @@
+.auth-group {
+	display: flex;
+	flex-direction: column;
+
+	&__label {
+		margin-bottom: 4px;
+	}
+}

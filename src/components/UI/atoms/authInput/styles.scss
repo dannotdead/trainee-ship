@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'MontserratRegular';
+	src: url('../../../../fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.input {
+	outline: none;
+
+	width: 354px;
+	height: 56px;
+	padding-left: 16px;
+
+	font-family: 'MontserratRegular', sans-serif;
+	font-size: 15px;
+	line-height: 23px;
+	color: #333333;
+
+	border: 1px solid #b3cdf8;
+	box-sizing: border-box;
+	border-radius: 8px;
+
+	&::placeholder {
+		color: #9f9f9f;
+	}
+}

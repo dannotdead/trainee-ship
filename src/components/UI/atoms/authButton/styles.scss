@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'MontserratMedium';
+	src: url('../../../../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	width: 233px;
+	height: 56px;
+
+	font-family: 'MontserratMedium', sans-serif;
+	font-size: 15px;
+	line-height: 23px;
+	font-weight: 500;
+	color: white;
+
+	background: #5c98f1;
+	border-radius: 8px;
+
+	&:hover {
+		background: #4583de;
+	}
+
+	&:active {
+		background: #2c6ac7;
+	}
+
+	&:disabled {
+		background: #d1d1d1;
+		cursor: default;
+	}
+}

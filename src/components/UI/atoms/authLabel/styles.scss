@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'MontserratSemiBold';
+	src: url('../../../../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.label {
+	font-family: 'MontserratSemiBold', sans-serif;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 19px;
+	color: #333333;
+}
