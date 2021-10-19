@@ -1,20 +1,14 @@
-import React, { FC } from 'react'
+import React, { ChangeEvent, FC } from 'react'
 import './styles.scss'
 
 interface IInput {
 	placeholder: string
-	onChange: (state: string) => void
+	onChange: (event: ChangeEvent<HTMLInputElement>) => void
 	className?: string
 }
 
 const Input: FC<IInput> = ({ placeholder, onChange, className = '' }) => {
-	return (
-		<input
-			className={`input ${className}`}
-			placeholder={placeholder}
-			onChange={event => onChange(event.target.value)}
-		/>
-	)
+	return <input className={`input ${className}`} placeholder={placeholder} onChange={onChange} />
 }
 
 export default Input

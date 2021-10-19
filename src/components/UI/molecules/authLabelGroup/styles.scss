@@ -1,8 +1,27 @@
+@font-face {
+	font-family: 'MontserratMedium';
+	src: url('../../../../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+
 .auth-group {
 	display: flex;
 	flex-direction: column;
 
 	&__label {
 		margin-bottom: 4px;
+	}
+
+	&__label-error {
+		position: absolute;
+
+		margin-top: 83px;
+
+		font-family: 'MontserratMedium', sans-serif;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 19px;
+		color: #fb6262;
 	}
 }
