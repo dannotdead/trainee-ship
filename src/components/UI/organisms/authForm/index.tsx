@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react'
 import Button from '../../atoms/authButton'
+import Logo from '../../atoms/logo'
 import AuthLabelGroup from '../../molecules/authLabelGroup'
+import WelcomeHeader from '../../molecules/authWelcomeHeader'
 import './styles.scss'
 
 const AuthForm: FC = () => {
@@ -17,6 +19,8 @@ const AuthForm: FC = () => {
 
 	return (
 		<div className='auth-form'>
+			<Logo />
+			<WelcomeHeader />
 			<AuthLabelGroup
 				valueLabel='User name'
 				placeholderInput='Input user name'
