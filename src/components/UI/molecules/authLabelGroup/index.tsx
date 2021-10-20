@@ -23,7 +23,12 @@ const AuthLabelGroup: FC<IAuthLabelGroup> = ({
 	return (
 		<div className='auth-group'>
 			<Label value={valueLabel} className='auth-group__label' />
-			<Input placeholder={placeholderInput} className={classNameInput} onChange={onChange} />
+			<Input
+				placeholder={placeholderInput}
+				className={classNameInput}
+				onChange={onChange}
+				isValid={isValid}
+			/>
 			{!isValid && <Label value={valueLabelError} className='auth-group__label-error' />}
 		</div>
 	)
