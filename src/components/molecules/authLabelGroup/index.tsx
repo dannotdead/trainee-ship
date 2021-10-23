@@ -1,11 +1,12 @@
 import React, { ChangeEvent, FC } from 'react'
-import Input from '../../atoms/authInput'
-import Label from '../../atoms/authLabel'
+import Input from '../../atoms/Input'
+import Label from '../../atoms/Label'
 import './styles.scss'
 
 interface IAuthLabelGroup {
 	valueLabel: string
 	placeholderInput: string
+	valueInput: string
 	onChange: (event: ChangeEvent<HTMLInputElement>) => void
 	isValid: boolean
 	valueLabelError?: string
@@ -16,20 +17,27 @@ const AuthLabelGroup: FC<IAuthLabelGroup> = ({
 	valueLabel,
 	placeholderInput,
 	classNameInput,
+	valueInput,
 	onChange,
 	isValid,
 	valueLabelError = ''
 }) => {
 	return (
 		<div className='auth-group'>
-			<Label value={valueLabel} className='auth-group__label' />
+			<Label valueLabel={valueLabel} className='auth-group__label' />
 			<Input
 				placeholder={placeholderInput}
 				className={classNameInput}
+				valueInput={valueInput}
 				onChange={onChange}
 				isValid={isValid}
 			/>
-			{!isValid && <Label value={valueLabelError} className='auth-group__label-error' />}
+			{!isValid && (
+				<Label
+					valueLabel={valueLabelError}
+					className='auth-group__label-error'
+				/>
+			)}
 		</div>
 	)
 }

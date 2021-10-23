@@ -1,6 +1,7 @@
 @font-face {
 	font-family: 'MontserratRegular';
-	src: url('../../../../fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-Regular.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
@@ -31,5 +32,11 @@
 
 	&::placeholder {
 		color: #9f9f9f;
+	}
+
+	&__error-icon {
+		position: absolute;
+		margin-left: 320px;
+		margin-top: 40px;
 	}
 }

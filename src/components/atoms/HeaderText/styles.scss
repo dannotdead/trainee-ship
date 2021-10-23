@@ -1,34 +1,39 @@
 @font-face {
 	font-family: 'MontserratRegular';
-	src: url('../../../../fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-Regular.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'MontserratMedium';
-	src: url('../../../../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-Medium.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'MontserratSemiBold';
-	src: url('../../../../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-SemiBold.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'MontserratBold';
-	src: url('../../../../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-Bold.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'MontserratExtraBold';
-	src: url('../../../../fonts/montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+	src: url('../../../assets/fonts/montserrat/Montserrat-ExtraBold.ttf')
+		format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
@@ -36,12 +41,16 @@
 .header-regular {
 	font-family: 'MontserratRegular', sans-serif;
 	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
 	color: #303030;
 }
 
 .header-medium {
 	font-family: 'MontserratMedium', sans-serif;
 	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
 	color: #303030;
 }
 
@@ -54,11 +63,23 @@
 .header-bold {
 	font-family: 'MontserratBold', sans-serif;
 	font-weight: 700;
+	font-size: 27px;
+	line-height: 33px;
 	color: #333333;
 }
 
 .header-extra-bold {
 	font-family: 'MontserratExtraBold', sans-serif;
 	font-weight: 800;
+	font-size: 42px;
+	line-height: 51px;
 	color: #333333;
+}
+
+.header-blue-color {
+	color: #5e93e7;
+}
+
+.header-lightblue-color {
+	color: #b3cdf8;
 }

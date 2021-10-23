@@ -1,8 +1,9 @@
 import React, { ChangeEvent, FC, useState } from 'react'
-import Button from '../../atoms/authButton'
-import Logo from '../../atoms/logo'
+import Button from '../../atoms/Button'
+import Image from '../../atoms/Image'
 import AuthLabelGroup from '../../molecules/authLabelGroup'
 import WelcomeHeader from '../../molecules/authWelcomeHeader'
+import MainLogo from '../../../assets/images/MainAppIcon.svg'
 import './styles.scss'
 
 const AuthForm: FC = () => {
@@ -45,12 +46,13 @@ const AuthForm: FC = () => {
 
 	return (
 		<div className='auth-form'>
-			<Logo />
+			<Image sourceImage={MainLogo} className={'auth-form__logo'} />
 			<WelcomeHeader />
 			<AuthLabelGroup
 				valueLabel='User name'
 				placeholderInput='Input user name'
 				classNameInput={!isValidUserName ? 'auth-form__input-error' : ''}
+				valueInput={userNameInput}
 				onChange={onChangeUserName}
 				isValid={isValidUserName}
 				valueLabelError={errorMsgUserName}
@@ -59,11 +61,12 @@ const AuthForm: FC = () => {
 				valueLabel='Password'
 				placeholderInput='Input password'
 				classNameInput={!isValidPassword ? 'auth-form__input-error' : ''}
+				valueInput={passwordInput}
 				onChange={onChangePassword}
 				isValid={isValidPassword}
 				valueLabelError={errorMsgPassword}
 			/>
-			<Button value='Log In' className='auth-form__button' />
+			<Button buttonName='Log In' className='auth-form__button' />
 		</div>
 	)
 }
