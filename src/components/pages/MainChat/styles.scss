@@ -1,0 +1,13 @@
+.chat-page {
+	display: flex;
+	flex-direction: column;
+
+	background: #eff5ff;
+	height: 100%;
+
+	&__content {
+		display: flex;
+		z-index: 1;
+		height: 1000px;
+	}
+}

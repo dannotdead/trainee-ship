@@ -1,6 +1,9 @@
 .auth-form {
-	margin-top: 32px;
-	margin-left: 32px;
+	padding-top: 256px;
+	padding-left: 121px;
+	background-color: white;
+	width: 55%;
+	height: 100%;
 
 	&__input-error {
 		border: 1px solid #fb6262;
@@ -18,5 +21,11 @@
 
 	&__logo {
 		margin-bottom: 16px;
+	}
+}
+
+@media screen and (min-width: 1441px) {
+	.auth-form {
+		width: 75%;
 	}
 }

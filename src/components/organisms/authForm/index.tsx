@@ -66,7 +66,7 @@ const AuthForm: FC = () => {
 				isValid={isValidPassword}
 				valueLabelError={errorMsgPassword}
 			/>
-			<Button buttonName='Log In' className='auth-form__button' />
+			<Button buttonName='Log In' className='button auth-form__button' />
 		</div>
 	)
 }

@@ -1,0 +1,27 @@
+.loader {
+	height: 56px;
+	width: 56px;
+
+	padding-top: 15px;
+	padding-left: 15px;
+
+	margin-left: 475px;
+	margin-top: 432px;
+
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+
+	&__icon {
+		animation: spin 2s linear infinite;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

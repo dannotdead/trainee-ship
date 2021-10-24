@@ -1,0 +1,15 @@
+.side-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 33%;
+	height: 100%;
+	background: white;
+	border-right: 1px solid rgba($color: #88abe3, $alpha: 0.5);
+}
+
+@media screen and (min-width: 1441px) {
+	.side-bar {
+		width: 50%;
+	}
+}

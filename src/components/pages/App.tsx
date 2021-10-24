@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
-import AuthForm from '../organisms/authForm'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
+import Routes from '../../routes'
 
 const App: FC = () => {
 	return (
-		<div className='App'>
-			<AuthForm />
-		</div>
+		<Router>
+			<Routes />
+		</Router>
 	)
 }
 

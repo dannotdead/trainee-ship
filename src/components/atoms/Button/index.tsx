@@ -9,7 +9,7 @@ interface IButton {
 
 const Button: FC<IButton> = ({ buttonName, disabled, className }) => {
 	return (
-		<button className={`button ${className}`} disabled={disabled}>
+		<button className={className} disabled={disabled}>
 			{buttonName}
 		</button>
 	)

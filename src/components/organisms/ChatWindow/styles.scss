@@ -1,0 +1,9 @@
+.chat-window {
+	&__background {
+		position: absolute;
+		max-height: 1080px;
+		z-index: -2;
+		margin-top: -80px;
+		right: 0;
+	}
+}
