@@ -1,11 +1,46 @@
 import React, { FC } from 'react'
 import './styles.scss'
 import NoChatsMessage from '../../molecules/NoChatsMessage'
+import UsersListItem from '../../molecules/UsersListItem'
 
-const SideBar: FC = () => {
+interface ISideBar {
+	usersList?: Array<Type>
+}
+
+interface Type {
+	id: string
+	firstName: string
+	lastName: string
+	lastSeen: string
+	history: Array<TypeHistory>
+}
+
+interface TypeHistory {
+	id: string
+	senderId: string
+	data: string
+}
+
+const SideBar: FC<ISideBar> = ({ usersList }) => {
 	return (
 		<div className='side-bar'>
-			<NoChatsMessage />
+			{usersList ? (
+				usersList.map(item => (
+					<UsersListItem
+						key={item.id}
+						userId={item.id}
+						userFirstName={item.firstName}
+						userLastName={item.lastName}
+						userLastMessage={
+							item.history[item.history.length - 1].senderId === item.id
+								? item.history[item.history.length - 1].data
+								: `You: ${item.history[item.history.length - 1].data}`
+						}
+					/>
+				))
+			) : (
+				<NoChatsMessage />
+			)}
 		</div>
 	)
 }

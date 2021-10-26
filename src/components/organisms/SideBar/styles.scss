@@ -1,14 +1,28 @@
-.side-bar {
+.side-bar-no-users {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 33%;
+
+	width: 25%;
 	height: 100%;
+
 	background: white;
 	border-right: 1px solid rgba($color: #88abe3, $alpha: 0.5);
 }
 
-@media screen and (min-width: 1441px) {
+.side-bar {
+	display: flex;
+	flex-direction: column;
+
+	width: 25%;
+	height: 100%;
+
+	background: white;
+	border-right: 1px solid rgba($color: #88abe3, $alpha: 0.5);
+}
+
+@media screen and (min-width: 1460px) {
+	.side-bar-no-users,
 	.side-bar {
 		width: 50%;
 	}

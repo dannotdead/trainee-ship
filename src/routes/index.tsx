@@ -10,7 +10,7 @@ const Routes: FC = () => {
 			<Route path={SCREENS.SCREEN_LOGIN} exact>
 				<Login />
 			</Route>
-			<Route path={SCREENS.SCREEN_CHAT} exact>
+			<Route path={[SCREENS.SCREEN_CHAT, SCREENS.SCREEN_CHAT_ID]} exact>
 				<ChatPage />
 			</Route>
 			<Redirect to={SCREENS.SCREEN_CHAT} />
