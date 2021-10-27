@@ -27,7 +27,7 @@ const AuthLabelGroup: FC<IAuthLabelGroup> = ({
 			<Label valueLabel={valueLabel} className='auth-group__label' />
 			<Input
 				placeholder={placeholderInput}
-				className={classNameInput}
+				className={`login-form-input ${classNameInput}`}
 				valueInput={valueInput}
 				onChange={onChange}
 				isValid={isValid}

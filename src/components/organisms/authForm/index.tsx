@@ -5,6 +5,7 @@ import AuthLabelGroup from '../../molecules/authLabelGroup'
 import WelcomeHeader from '../../molecules/authWelcomeHeader'
 import MainLogo from '../../../assets/images/MainAppIcon.svg'
 import './styles.scss'
+import { useHistory } from 'react-router'
 
 const AuthForm: FC = () => {
 	const [userNameInput, setUserNameInput] = useState<string>('')
@@ -15,6 +16,8 @@ const AuthForm: FC = () => {
 
 	const [errorMsgUserName, setErrorMsgUserName] = useState<string>('')
 	const [errorMsgPassword, setErrorMsgPassword] = useState<string>('')
+
+	const history = useHistory()
 
 	const onChangeUserName = (event: ChangeEvent<HTMLInputElement>) => {
 		validationUserName()
@@ -27,21 +30,31 @@ const AuthForm: FC = () => {
 	}
 
 	const validationUserName = () => {
-		if (userNameInput.length > 10) {
+		if (userNameInput.length < 2) {
 			setIsValidUserName(false)
 			setErrorMsgUserName('Something goes wrong')
+			return false
 		} else {
 			setIsValidUserName(true)
+			return true
 		}
 	}
 
 	const validationPassword = () => {
-		if (passwordInput.length > 10) {
+		if (passwordInput.length < 2) {
 			setIsValidPassword(false)
 			setErrorMsgPassword('Something goes wrong in password')
+			return false
 		} else {
 			setIsValidPassword(true)
+			return true
 		}
+	}
+
+	const handleClickLogInButton = () => {
+		validationUserName()
+		validationPassword()
+		if (validationUserName() && validationPassword()) history.push('/chat')
 	}
 
 	return (
@@ -66,7 +79,11 @@ const AuthForm: FC = () => {
 				isValid={isValidPassword}
 				valueLabelError={errorMsgPassword}
 			/>
-			<Button buttonName='Log In' className='button auth-form__button' />
+			<Button
+				buttonName='Log In'
+				className='button auth-form__button'
+				onClick={handleClickLogInButton}
+			/>
 		</div>
 	)
 }

@@ -2,7 +2,7 @@
 	padding-top: 256px;
 	padding-left: 121px;
 	background-color: white;
-	width: 55%;
+	width: 50%;
 	height: 100%;
 
 	&__input-error {
@@ -21,11 +21,5 @@
 
 	&__logo {
 		margin-bottom: 16px;
-	}
-}
-
-@media screen and (min-width: 1441px) {
-	.auth-form {
-		width: 75%;
 	}
 }

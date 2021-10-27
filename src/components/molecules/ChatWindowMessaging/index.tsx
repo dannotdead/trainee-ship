@@ -9,7 +9,6 @@ const ChatWindowMessaging: FC = () => {
 	const handleChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
 		setSendMessageInput(event.target.value)
 	}
-	console.log(sendMessageInput)
 
 	return (
 		<div className='chat-window-messaging'>

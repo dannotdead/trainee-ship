@@ -1,5 +1,155 @@
 .login-page {
 	display: flex;
 	height: 100vh;
-	background-color: #eff5ff;
+	background: url('../../../assets/images/LoginBackground.svg') no-repeat right,
+		#eff5ff;
+}
+
+@media screen and (min-width: 1441px) {
+	.auth-form {
+		width: 65%;
+	}
+}
+
+@media screen and (min-width: 840px) and (max-width: 1220px) {
+	.auth-form {
+		padding-top: 256px;
+		padding-left: 50px;
+		background-color: white;
+		width: 55%;
+		height: 100%;
+
+		&__input-error {
+			border: 1px solid #fb6262;
+			box-sizing: border-box;
+			border-radius: 8px;
+
+			&:focus {
+				border: 1px solid #fb6262;
+			}
+		}
+
+		&__button {
+			margin-top: 16px;
+		}
+
+		&__logo {
+			margin-bottom: 16px;
+		}
+	}
+
+	.login-form-input {
+		width: 233px;
+
+		&__error-icon {
+			position: absolute;
+			margin-left: 200px;
+			margin-top: 40px;
+		}
+	}
+}
+
+@media screen and (min-width: 375px) and (max-width: 839px) {
+	.login-page {
+		flex-direction: column;
+		position: relative;
+		background: url('../../../assets/images/LoginImageMobile.svg') no-repeat top,
+			#eff5ff;
+		background-size: 100%;
+		padding-top: 316px;
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+
+			height: 10px;
+			width: 20px;
+
+			bottom: 0;
+		}
+		&::after {
+			right: -5px;
+			top: 301px;
+			transform: rotate(-90deg);
+
+			border-radius: 0 0 0 12px;
+			-moz-border-radius: 0 0 0 12px;
+			-webkit-border-radius: 0 0 0 12px;
+
+			-webkit-box-shadow: -12px 0 0 0 white;
+			box-shadow: -12px 0 0 0 white;
+		}
+		&::before {
+			left: -5px;
+			top: 301px;
+			transform: rotate(90deg);
+
+			border-radius: 0 0 12px 0;
+			-moz-border-radius: 0 0 12px 0;
+			-webkit-border-radius: 0 0 12px 0;
+
+			-webkit-box-shadow: 12px 0 0 0 white;
+			box-shadow: 12px 0 0 0 white;
+		}
+	}
+
+	.header-extra-bold {
+		font-size: 27px;
+		line-height: 33px;
+	}
+	.welcome-header {
+		margin-bottom: 75px;
+		&__item1 {
+			margin-bottom: 8px;
+			position: absolute;
+			margin-top: -93px;
+		}
+
+		&__item2 {
+			position: absolute;
+			margin-top: -50px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	.auth-form {
+		padding-top: 0;
+		padding-left: 14px;
+		background-color: white;
+		width: 100%;
+		height: 100%;
+
+		&__input-error {
+			border: 1px solid #fb6262;
+			box-sizing: border-box;
+			border-radius: 8px;
+
+			&:focus {
+				border: 1px solid #fb6262;
+			}
+		}
+
+		&__button {
+			margin-top: 80px;
+			width: 347px;
+		}
+
+		&__logo {
+			position: absolute;
+			margin-top: -142px;
+			width: 85px;
+			z-index: 2;
+		}
+	}
+
+	.login-form-input {
+		width: 348px;
+
+		&__error-icon {
+			position: absolute;
+			margin-left: 315px;
+			margin-top: 40px;
+		}
+	}
 }

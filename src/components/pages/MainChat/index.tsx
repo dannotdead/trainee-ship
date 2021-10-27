@@ -58,12 +58,8 @@ const mockUsers = [
 // для проверки верстки без пользователей если придет undefined с сервера
 const usersundef = undefined
 
-interface ChatID {
-	id: string
-}
-
 const ChatPage: FC = () => {
-	const chatId = useParams<ChatID>()
+	const chatId = useParams<{ id: string }>()
 	const [isUsersListChats, setIsUsersListChats] = useState(false)
 	const user = mockUsers.find(user => {
 		if (user.id === chatId.id) return user

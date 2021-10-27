@@ -57,17 +57,6 @@ const ChatWindow: FC<IChatWindow> = ({
 			) : (
 				<HeaderText valueHeaderText='' />
 			)}
-			{/* {userId ? (
-				<HeaderText
-					valueHeaderText={`${userFirstName} ${userLastName}`}
-					className='header-regular'
-				/>
-			) : (
-				<HeaderText
-					valueHeaderText='Select a chat to start messaging'
-					className='header-medium chat-window__select-header'
-				/>
-			)} */}
 		</div>
 	)
 }
