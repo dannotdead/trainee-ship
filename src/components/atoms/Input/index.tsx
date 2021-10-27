@@ -21,13 +21,16 @@ const Input: FC<IInput> = ({
 	return (
 		<>
 			<input
-				className={`input ${className}`}
+				className={className}
 				placeholder={placeholder}
 				onChange={onChange}
 				value={valueInput}
 			/>
 			{!isValid && (
-				<Image sourceImage={ErrorIcon} className={'input__error-icon'} />
+				<Image
+					sourceImage={ErrorIcon}
+					className={'login-form-input__error-icon'}
+				/>
 			)}
 		</>
 	)

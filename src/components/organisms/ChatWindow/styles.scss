@@ -1,12 +1,27 @@
 .chat-window {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	&__background {
 		position: absolute;
 		max-height: 1080px;
 		z-index: -2;
-		margin-top: -40px;
+		margin-top: -80px;
 		right: 0;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		background: white;
+		height: 96px;
+		width: 1100px;
+	}
+
+	&__history {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 823px;
 	}
 
 	&__select-header {
@@ -22,5 +37,6 @@
 		border-radius: 32px;
 
 		margin-left: 370px;
+		margin-top: 432px;
 	}
 }

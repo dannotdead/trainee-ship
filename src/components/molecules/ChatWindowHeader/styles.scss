@@ -1,0 +1,21 @@
+.chat-window {
+	&__header {
+		padding-top: 24px;
+		padding-left: 24px;
+		border-bottom: 1px solid rgba($color: #88abe3, $alpha: 0.3);
+
+		&__first-name {
+			margin-bottom: 4px;
+
+			font-size: 20px;
+			line-height: 24px;
+			color: #333333;
+		}
+
+		&__last-name {
+			font-size: 16px;
+			line-height: 20px;
+			color: #949494;
+		}
+	}
+}

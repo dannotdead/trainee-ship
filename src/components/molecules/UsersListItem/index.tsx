@@ -3,7 +3,7 @@ import Image from '../../atoms/Image'
 import ProfileAvatar from '../../../assets/images/ProfileAvatarMale.svg'
 import './styles.scss'
 import HeaderText from '../../atoms/HeaderText'
-import { useHistory } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 
 interface IUsersListItem {
 	userId: string
@@ -19,7 +19,9 @@ const UsersListItem: FC<IUsersListItem> = ({
 	userLastMessage
 }) => {
 	const [isActiveChat, setIsActiveChat] = useState<boolean>(false)
-	const className = isActiveChat ? 'users-list-item-active' : 'users-list-item'
+	const chatId = useParams<{ id: string }>()
+	const className =
+		chatId.id === userId ? 'users-list-item-active' : 'users-list-item'
 	const history = useHistory()
 
 	const handleClick = () => {

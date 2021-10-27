@@ -1,0 +1,49 @@
+.chat-window-messaging {
+	display: flex;
+	align-items: center;
+
+	background: white;
+	border-top: 1px solid rgba($color: #88abe3, $alpha: 0.3);
+
+	height: 80px;
+	width: 1100px;
+
+	&__button-file {
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		width: 22px;
+		height: 22px;
+
+		margin-left: 30px;
+
+		background: url('../../../assets/images/AttachmentIcon.svg') no-repeat
+			center;
+	}
+
+	&__input {
+		outline: none;
+		border: none;
+
+		font-size: 16px;
+		line-height: 20px;
+		color: #303030;
+
+		width: 960px;
+		margin-left: 37px;
+		padding-right: 20px;
+	}
+
+	&__button-send-msg {
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		height: 21px;
+		width: 24px;
+
+		background: url('../../../assets/images/SendMessageIcon.svg') no-repeat
+			center;
+	}
+}
