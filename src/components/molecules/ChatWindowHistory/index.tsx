@@ -1,8 +1,6 @@
 import React, { FC } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderText from '../../atoms/HeaderText'
-import Image from '../../atoms/Image'
-import FileIcon from '../../../assets/images/FileIcon.svg'
 import './styles.scss'
 import FileInMessage from '../FileInMessage'
 
