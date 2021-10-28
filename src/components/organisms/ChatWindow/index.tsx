@@ -21,6 +21,13 @@ interface TypeHistory {
 	id: string
 	senderId: string
 	data: string
+	file?: Array<TypeFile>
+}
+
+interface TypeFile {
+	fileId: string
+	fileName: string
+	fileSize: string
 }
 
 const ChatWindow: FC<IChatWindow> = ({

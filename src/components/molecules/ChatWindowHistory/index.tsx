@@ -1,7 +1,10 @@
 import React, { FC } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderText from '../../atoms/HeaderText'
+import Image from '../../atoms/Image'
+import FileIcon from '../../../assets/images/FileIcon.svg'
 import './styles.scss'
+import FileInMessage from '../FileInMessage'
 
 interface IChatWindowHistory {
 	className: string
@@ -12,6 +15,13 @@ interface TypeHistory {
 	id: string
 	senderId: string
 	data: string
+	file?: Array<TypeFile>
+}
+
+interface TypeFile {
+	fileId: string
+	fileName: string
+	fileSize: string
 }
 
 const ChatWindowHistory: FC<IChatWindowHistory> = ({
@@ -23,20 +33,34 @@ const ChatWindowHistory: FC<IChatWindowHistory> = ({
 		<div className={className}>
 			{userHistory?.map(message =>
 				chatId.id === message.senderId ? (
-					<div key={message.id} className='chat-window__history__foreign-msg'>
+					<div key={message.id} className={`${className}__foreign-msg`}>
+						{message.file?.map(file => (
+							<FileInMessage
+								key={file.fileId}
+								fileName={file.fileName}
+								fileSize={file.fileSize}
+								className={`${className}__foreign-msg`}
+							/>
+						))}
 						<HeaderText
 							valueHeaderText={message.data}
 							className='header-regular'
 						/>
-						<div className='chat-window__history__foreign-msg__triangle'></div>
 					</div>
 				) : (
-					<div key={message.id} className='chat-window__history__mine-msg'>
+					<div key={message.id} className={`${className}__mine-msg`}>
+						{message.file?.map(file => (
+							<FileInMessage
+								key={file.fileId}
+								fileName={file.fileName}
+								fileSize={file.fileSize}
+								className={`${className}__mine-msg`}
+							/>
+						))}
 						<HeaderText
 							valueHeaderText={message.data}
 							className='header-regular'
 						/>
-						<div className='chat-window__history__foreign-msg__triangle'></div>
 					</div>
 				)
 			)}

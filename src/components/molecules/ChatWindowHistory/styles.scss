@@ -31,6 +31,42 @@
 			line-height: 20px;
 			color: #303030;
 
+			&__file {
+				display: flex;
+
+				&__headers {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+
+					margin-left: 12px;
+
+					&::after {
+						position: absolute;
+						content: '';
+						top: 4px;
+						left: -12px;
+
+						border: 2.5px solid transparent;
+						border-left: 2.5px solid #5c98f1;
+						border-bottom: 2.5px solid #5c98f1;
+					}
+
+					&__title {
+						font-size: 16px;
+						line-height: 20px;
+						color: #303030;
+						margin-bottom: 2px;
+					}
+
+					&__size {
+						font-size: 14px;
+						line-height: 17px;
+						color: #303030;
+					}
+				}
+			}
+
 			&::before,
 			&::after {
 				content: '';
@@ -64,6 +100,42 @@
 			font-size: 16px;
 			line-height: 20px;
 			color: #303030;
+
+			&__file {
+				display: flex;
+
+				&__headers {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+
+					margin-left: 12px;
+
+					&::after {
+						position: absolute;
+						content: '';
+						top: 4px;
+						left: -12px;
+
+						border: 2.5px solid transparent;
+						border-left: 2.5px solid #5c98f1;
+						border-bottom: 2.5px solid #5c98f1;
+					}
+
+					&__title {
+						font-size: 16px;
+						line-height: 20px;
+						color: #303030;
+						margin-bottom: 2px;
+					}
+
+					&__size {
+						font-size: 14px;
+						line-height: 17px;
+						color: #303030;
+					}
+				}
+			}
 
 			&::before,
 			&::after {

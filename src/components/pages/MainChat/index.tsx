@@ -29,7 +29,8 @@ const mockUsers = [
 			{
 				id: '1',
 				senderId: '2',
-				data: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem!'
+				data: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem!',
+				file: []
 			},
 			{
 				id: '2',
@@ -37,19 +38,22 @@ const mockUsers = [
 				data: 'SeSed ut perspiciatis unde omnis iste natus error sit voluptatem \
 				accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab \
 				illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
-				accusantium doloremque laudantium, totam re'
+				accusantium doloremque laudantium, totam re',
+				file: []
 			},
 			{
 				id: '3',
 				senderId: '2',
 				data: 'SeSed ut perspiciatis unde omnis iste natus error sit voluptatem \
 				accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab \
-				illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
+				illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+				file: []
 			},
 			{
 				id: '4',
 				senderId: '34534',
-				data: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusanti'
+				data: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusanti',
+				file: []
 			}
 		]
 	},
@@ -62,7 +66,28 @@ const mockUsers = [
 			{
 				id: '1',
 				senderId: '34534',
-				data: 'How are you doing?'
+				data: 'How are you doing?',
+				file: []
+			}
+		]
+	},
+	{
+		id: '4',
+		firstName: 'Check',
+		lastName: 'File',
+		lastSeen: '11:23',
+		history: [
+			{
+				id: '1',
+				senderId: '34534',
+				data: '',
+				file: [
+					{
+						fileId: '1',
+						fileName: 'File_for_exampl0011232555234.doc',
+						fileSize: '4.2 MB'
+					}
+				]
 			}
 		]
 	}

@@ -4,10 +4,10 @@ import NoChatsMessage from '../../molecules/NoChatsMessage'
 import UsersListItem from '../../molecules/UsersListItem'
 
 interface ISideBar {
-	usersList?: Array<Type>
+	usersList?: Array<TypeUser>
 }
 
-interface Type {
+interface TypeUser {
 	id: string
 	firstName: string
 	lastName: string
