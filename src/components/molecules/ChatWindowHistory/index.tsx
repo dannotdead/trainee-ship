@@ -13,6 +13,7 @@ interface TypeHistory {
 	senderId: string
 	data: string
 }
+
 const ChatWindowHistory: FC<IChatWindowHistory> = ({
 	className,
 	userHistory

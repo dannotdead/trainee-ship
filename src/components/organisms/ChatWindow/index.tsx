@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import Image from '../../atoms/Image'
 import ChatBackground from '../../../assets/images/ChatBackground.svg'
 import './styles.scss'
@@ -31,11 +31,20 @@ const ChatWindow: FC<IChatWindow> = ({
 	userLastSeen,
 	userHistory
 }) => {
+	// демонстрация лоадера
+	const [isLoading, setIsLoading] = useState<boolean>(true)
+
+	useEffect(() => {
+		setTimeout(() => {
+			setIsLoading(false)
+		}, 2000)
+	})
+
 	return (
 		<div className='chat-window'>
 			<Image sourceImage={ChatBackground} className='chat-window__background' />
-			{/* <Loader /> */}
-			{isUsersListChats && userId ? (
+			{isLoading && <Loader />}
+			{isUsersListChats && userId && !isLoading ? (
 				<>
 					<ChatWindowHeader
 						userFirstName={userFirstName}
@@ -49,7 +58,7 @@ const ChatWindow: FC<IChatWindow> = ({
 					/>
 					<ChatWindowMessaging />
 				</>
-			) : isUsersListChats ? (
+			) : isUsersListChats && !isLoading ? (
 				<HeaderText
 					valueHeaderText='Select a chat to start messaging'
 					className='header-medium chat-window__select-header'

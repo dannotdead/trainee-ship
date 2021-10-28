@@ -10,13 +10,15 @@ interface IUsersListItem {
 	userFirstName: string
 	userLastName: string
 	userLastMessage: string
+	userSenderId: string
 }
 
 const UsersListItem: FC<IUsersListItem> = ({
 	userId,
 	userFirstName,
 	userLastName,
-	userLastMessage
+	userLastMessage,
+	userSenderId
 }) => {
 	const [isActiveChat, setIsActiveChat] = useState<boolean>(false)
 	const chatId = useParams<{ id: string }>()
@@ -37,10 +39,18 @@ const UsersListItem: FC<IUsersListItem> = ({
 					valueHeaderText={`${userFirstName} ${userLastName}`}
 					className={`header-bold ${className}__headers__name`}
 				/>
-				<HeaderText
-					valueHeaderText={`${userLastMessage}`}
-					className={`header-medium ${className}__headers__msg`}
-				/>
+				<div className={`${className}__headers__block`}>
+					{userSenderId !== userId && (
+						<HeaderText
+							valueHeaderText={'You:'}
+							className={`header-medium ${className}__headers__msg__myself`}
+						/>
+					)}
+					<HeaderText
+						valueHeaderText={`${userLastMessage}`}
+						className={`header-medium ${className}__headers__msg`}
+					/>
+				</div>
 			</div>
 		</div>
 	)

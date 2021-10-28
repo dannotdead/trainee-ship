@@ -34,8 +34,9 @@ const SideBar: FC<ISideBar> = ({ usersList }) => {
 						userLastMessage={
 							item.history[item.history.length - 1].senderId === item.id
 								? item.history[item.history.length - 1].data
-								: `You: ${item.history[item.history.length - 1].data}`
+								: `${item.history[item.history.length - 1].data}`
 						}
+						userSenderId={item.history[item.history.length - 1].senderId}
 					/>
 				))
 			) : (

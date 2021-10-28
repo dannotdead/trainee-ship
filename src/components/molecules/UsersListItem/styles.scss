@@ -22,6 +22,10 @@
 
 		margin-left: 12px;
 
+		&__block {
+			display: flex;
+		}
+
 		&__name {
 			font-size: 15px;
 		}
@@ -32,10 +36,16 @@
 			text-overflow: ellipsis;
 
 			height: 17px;
-			width: 250px;
+			width: 210px;
 
 			font-size: 14px;
 			color: #949494;
+
+			&__myself {
+				font-size: 14px;
+				padding-right: 5px;
+				color: #5e93e7;
+			}
 		}
 	}
 }
@@ -56,6 +66,10 @@
 
 		margin-left: 12px;
 
+		&__block {
+			display: flex;
+		}
+
 		&__name {
 			font-size: 15px;
 			color: white;
@@ -67,10 +81,16 @@
 			text-overflow: ellipsis;
 
 			height: 17px;
-			width: 250px;
+			width: 210px;
 
 			font-size: 14px;
 			color: white;
+
+			&__myself {
+				font-size: 14px;
+				padding-right: 5px;
+				color: white;
+			}
 		}
 	}
 }
